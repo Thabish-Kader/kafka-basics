@@ -4,7 +4,6 @@ import kafkaClient from "./kafkaClient.js";
 const init = async () => {
   const admin = kafkaClient.admin();
   await admin.connect();
-  console.log("-------- Admin Created --------");
   await admin.createTopics({
     topics: [
       {
